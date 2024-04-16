@@ -23,17 +23,18 @@ class Wykres:
     def wykres(self):
         print(f"a = {self.a}, b = {self.b}, c = {self.c}")
         print("Wykres:")
-        print("+" + "-" * self.a + "+")
-        print("|" + " " * self.a + "|")
-        print("+" + "-" * self.a + "+")
-
-        print("+" + "-" * self.b + "+")
-        print("|" + " " * self.b + "|")
-        print("+" + "-" * self.b + "+")
-
-        print("+" + "-" * self.c + "+")
-        print("|" + " " * self.c + "|")
-        print("+" + "-" * self.c + "+")
+        max_value = max(self.a, self.b, self.c)
+        print(" " * (max_value - self.a) + "+" + "-" * self.a + "+")
+        print(" " * (max_value - self.a) + "|" + " " * self.a + "|")
+        print(" " * (max_value - self.a) + "+" + "-" * self.a + "+")
+        print(" " * (max_value + 1) + "|")
+        print(" " * (max_value - self.b) + "+" + "-" * self.b + "+")
+        print(" " * (max_value - self.b) + "|" + " " * self.b + "|")
+        print(" " * (max_value - self.b) + "+" + "-" * self.b + "+")
+        print(" " * (max_value + 1) + "|")
+        print(" " * (max_value - self.c) + "+" + "-" * self.c + "+")
+        print(" " * (max_value - self.c) + "|" + " " * self.c + "|")
+        print(" " * (max_value - self.c) + "+" + "-" * self.c + "+")
 
 if __name__ == "__main__":
     wykres = Wykres()
